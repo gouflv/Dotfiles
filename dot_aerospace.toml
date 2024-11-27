@@ -1,0 +1,118 @@
+start-at-login = true
+
+after-startup-command = []
+
+[gaps]
+inner.horizontal = 8
+inner.vertical =   8
+outer.left =       8
+outer.bottom =     8
+outer.top =        8
+outer.right =      8
+
+[workspace-to-monitor-force-assignment]
+1 = 'main'
+2 = 'main'
+3 = ['secondary', 'main']
+4 = ['secondary', 'main']
+
+[mode.main.binding]
+# layout
+alt-slash = 'layout h_tiles v_tiles'
+alt-s = 'layout v_accordion h_tiles'
+
+# focus
+alt-h = 'focus left'
+alt-j = 'focus down'
+alt-k = 'focus up'
+alt-l = 'focus right'
+
+# move
+alt-shift-h = 'move left'
+alt-shift-j = 'move down'
+alt-shift-k = 'move up'
+alt-shift-l = 'move right'
+
+# resize
+alt-shift-minus = 'resize smart -50'
+alt-shift-equal = 'resize smart +50'
+
+# switch workspace
+alt-1 = 'workspace 1'
+alt-2 = 'workspace 2'
+alt-3 = 'workspace 3'
+alt-4 = 'workspace 4'
+alt-tab = 'workspace-back-and-forth'
+
+# move to workspace
+alt-shift-1 = 'move-node-to-workspace 1'
+alt-shift-2 = 'move-node-to-workspace 2'
+alt-shift-3 = 'move-node-to-workspace 3'
+alt-shift-4 = 'move-node-to-workspace 4'
+
+# focus screen
+alt-leftSquareBracket = 'focus-monitor left'
+alt-rightSquareBracket = 'focus-monitor right'
+
+# mode
+alt-shift-slash = 'mode service'
+
+[mode.service.binding]
+# reload
+esc = ['reload-config', 'mode main']
+
+# floating
+f = ['layout floating tiling', 'mode main']
+
+# reset
+r = ['flatten-workspace-tree', 'mode main']
+
+# keep current only
+backspace = ['close-all-windows-but-current', 'mode main']
+
+# join
+alt-shift-h = ['join-with left', 'mode main']
+alt-shift-j = ['join-with down', 'mode main']
+alt-shift-k = ['join-with up', 'mode main']
+alt-shift-l = ['join-with right', 'mode main']
+
+
+#
+# Callbacks
+#
+
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Safari'
+run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.mail'
+run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.iCal'
+run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
+if.app-id = 'com.tencent.xinWeChat'
+run = ['layout floating', 'move-node-to-workspace 1']
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.VSCode'
+run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.edgemac'
+run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome'
+run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
+if.app-id = 'dev.warp.Warp-Stable'
+run = 'move-node-to-workspace 3'
