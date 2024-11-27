@@ -1,0 +1,150 @@
+{
+  //
+  // Editor
+  //
+  "editor.fontSize": 12,
+  "editor.lineHeight": 1.5,
+  "editor.fontFamily": "'Jetbrains Mono', 'Monaspace Neon'",
+  "editor.fontLigatures": true,
+  // "editor.fontLigatures": "'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss06', 'liga'",
+  "editor.tabSize": 2,
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.inlineSuggest.suppressSuggestions": true,
+  "editor.rulers": [],
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 100,
+  "editor.wrappingIndent": "indent",
+  "editor.cursorSurroundingLines": 4,
+  "editor.lightbulb.enabled": "off",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.stickyScroll.enabled": true,
+  "editor.accessibilitySupport": "off",
+  "editor.suggest.selectionMode": "whenQuickSuggestion",
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+    // "source.sortImports": "explicit"
+  },
+  "references.preferredLocation": "view",
+  //
+  // Workspace
+  //
+  "files.readonlyInclude": {
+    "**/node_modules/**": true,
+    "**/dist/**": false,
+    "**/build/**": true,
+    "**/*.min.*": true
+  },
+  "files.exclude": {
+    "**/*.tsbuildinfo": true
+  },
+  "breadcrumbs.symbolPath": "off",
+  "workbench.activityBar.location": "hidden",
+  "workbench.colorTheme": "Default Light Modern",
+  "workbench.editor.openSideBySideDirection": "down",
+  "workbench.editorLargeFileConfirmation": 100,
+  "workbench.settings.editor": "json",
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
+  "workbench.layoutControl.enabled": false,
+  "window.customTitleBarVisibility": "auto",
+  "window.commandCenter": false,
+  "window.title": "${rootName}",
+  "outline.icons": false,
+  // "terminal.integrated.fontFamily": "Monaspace Neon",
+  // "terminal.integrated.fontSize": 13,
+  //
+  // Tools
+  //
+  "explorer.autoReveal": false,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "tsconfig.json": "tsconfig.*.json, env.d.ts",
+    "vite.config.*": "jsconfig*, vitest.config.*, cypress.config.*, playwright.config.*",
+    "package.json": "package-lock.json, pnpm*, .yarnrc*, yarn*, .eslint*, eslint*, .prettier*, prettier*, .editorconfig"
+  },
+  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.renderSideBySide": false,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/*.min.*": true,
+    "**/package-lock.json": true,
+    "**/*.lock": true,
+    "**/fixtures/**": true
+  },
+  "search.smartCase": true,
+  "git.autofetch": true,
+  "git.openRepositoryInParentFolders": "never",
+  "security.workspace.trust.enabled": false,
+  "security.promptForLocalFileProtocolHandling": false,
+  "http.proxy": "http://127.0.0.1:6152",
+  //
+  // Language
+  //
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "Lua.diagnostics.globals": ["vim"],
+  "[lua]": {
+    "editor.defaultFormatter": "sumneko.lua"
+  },
+  //
+  // Extensions
+  //
+  "extensions.ignoreRecommendations": true,
+  "cSpell.userWords": [
+    "antd",
+    "axios",
+    "Cascader",
+    "clazz",
+    "constate",
+    "echarts",
+    "fanya",
+    "gouflv",
+    "pinia",
+    "tailwindcss",
+    "testid",
+    "trpc",
+    "tsup",
+    "vite",
+    "vnode",
+    "vueuse"
+  ],
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "vscode-neovim.compositeKeys": {
+    "jk": {
+      "command": "vscode-neovim.escape"
+    }
+  },
+  "errorLens.excludeBySource": ["cSpell"],
+  "errorLens.enabledDiagnosticLevels": ["error"],
+  "gitHistory.showEditorTitleMenuBarIcons": false,
+  "github.copilot.editor.enableCodeActions": false,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true
+  },
+  "unocss.autocomplete.matchType": "fuzzy",
+  "unocss.autocomplete.maxItems": 100,
+  "bookmarks.showCommandsInContextMenu": false,
+  "todo-tree.highlights.defaultHighlight": {
+    "background": "#AF47D2",
+    "foreground": "#fff"
+  },
+  "todo-tree.highlights.customHighlight": {
+    "FIXME": {
+      "background": "#FC4100"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+let mapleader=" "
+
+set nocompatible
+syntax on
+
+" Indention
+set autoindent
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set shiftround
+    
+" Search
+set incsearch
+set ignorecase
+set smartcase
+
+" Text
+set encoding=utf-8
+set showmatch
+set clipboard+=unnamed
+set nowrap
+
+" Interface
+set scrolloff=10
+set cursorline
+set number
+set relativenumber
+set title
+set autoread
+
+"nnoremap svr :so $MYVIMRC<CR>
+
+" Movement
+noremap H ^
+noremap L g_
+
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+
+" Back to normal mode
+inoremap jk <Esc>
+inoremap jj <Esc>
+
+" Run Command easier
+"nnoremap ; :
+"nnoremap : ;
+
+" Redo
+noremap U <C-r>
+
+" Change text without putting into register
+" see https://stackoverflow.com/q/54255/6064933
+nnoremap c "_c
+
+" Replace visual selection with text in register
+xnoremap p "_dp
+
+" Continuous visual shifting
+xnoremap < <gv
+xnoremap > >gv
+
+" Keep cursor position after yanking
+vnoremap y y']
+
+" Window
+nnoremap <leader>l      <c-w>l
+nnoremap <leader>j      <c-w>j
+nnoremap <leader>h      <c-w>h
+nnoremap <leader>k      <c-w>k
+
