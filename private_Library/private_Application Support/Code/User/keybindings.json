@@ -44,7 +44,7 @@
     "when": "inlineSuggestionVisible && !editorReadonly"
   },
   {
-    "key": "ctrl+\\",
+    "key": "ctrl+]",
     "command": "editor.action.inlineSuggest.showNext",
     "when": "inlineSuggestionVisible && !editorReadonly"
   },
@@ -91,16 +91,21 @@
   // Extensions
   //
 
-  // Cody
+  // chat
   {
-    "key": "cmd+i",
-    "command": "cody.command.edit-code",
-    "when": "cody.activated && !editorReadonly"
+    "key": "cmd+k s",
+    "command": "workbench.action.chat.openEditSession",
+    "when": "!workbench.panel.chat.view.copilot.visible"
   },
   {
-    "key": "cmd+shift+i",
-    "command": "cody.chat.new",
-    "when": "cody.activated"
+    "key": "cmd+k s",
+    "command": "workbench.action.toggleAuxiliaryBar",
+    "when": "workbench.panel.chat.view.copilot.visible"
+  },
+  {
+    "key": "escape",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "auxiliaryBarFocus"
   },
 
   //
@@ -113,10 +118,41 @@
   },
   {
     "key": "cmd+k s",
-    "command": "workbench.action.toggleAuxiliaryBar"
+    "command": "-workbench.action.files.saveWithoutFormatting"
   },
   {
-    "key": "cmd+k s",
-    "command": "-workbench.action.files.saveWithoutFormatting"
+    "key": "ctrl+cmd+i",
+    "command": "-workbench.action.chat.open",
+    "when": "chatPanelParticipantRegistered"
+  },
+  {
+    "key": "shift+cmd+i",
+    "command": "-workbench.action.chat.openEditSession",
+    "when": "chatEditingParticipantRegistered && chatIsEnabled && view != 'workbench.panel.chat.view.edits'"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "-workbench.action.chat.newChat",
+    "when": "chatIsEnabled && inChat && chatLocation != 'editing-session'"
+  },
+  {
+    "key": "cmd+enter",
+    "command": "workbench.action.chat.applyInEditor",
+    "when": "accessibleViewInCodeBlock && chatIsEnabled || chatIsEnabled && inChat && !inChatInput"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "-workbench.action.chat.applyInEditor",
+    "when": "accessibleViewInCodeBlock && chatIsEnabled || chatIsEnabled && inChat && !inChatInput"
+  },
+  {
+    "key": "cmd+i",
+    "command": "-markdown.extension.editing.toggleItalic",
+    "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+  },
+  {
+    "key": "cmd+i",
+    "command": "-mdx.toggleEmphasis",
+    "when": "editorTextFocus && !editorReadonly && editorLangId == 'mdx'"
   }
 ]

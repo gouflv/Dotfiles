@@ -138,10 +138,7 @@ map({ 'n', 'v' }, '<leader>n', notify 'workbench.action.nextEditor')
 map({ 'n', 'v' }, '<leader>/', notify 'workbench.action.showCommands')
 
 --
--- Cody
+-- Chat
 --
 
--- map('n', '<leader>ca', notify 'cody.fixup.acceptNearest')
--- map('n', '<leader>cr', notify 'cody.fixup.cancelNearest')
--- map('n', '<leader>ce', notify 'cody.fixup.retryNearest')
 

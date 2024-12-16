@@ -4,13 +4,11 @@
   //
   "editor.fontSize": 12,
   "editor.lineHeight": 1.5,
-  "editor.fontFamily": "'Jetbrains Mono', 'Monaspace Neon'",
+  "editor.fontFamily": "'Jetbrains Mono'",
   "editor.fontLigatures": true,
-  // "editor.fontLigatures": "'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss06', 'liga'",
   "editor.tabSize": 2,
   "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.inlineSuggest.enabled": true,
   "editor.inlineSuggest.suppressSuggestions": true,
@@ -23,11 +21,16 @@
   "editor.scrollbar.horizontal": "hidden",
   "editor.stickyScroll.enabled": true,
   "editor.accessibilitySupport": "off",
-  "editor.suggest.selectionMode": "whenQuickSuggestion",
+  "editor.quickSuggestions": {
+    "other": false,
+    "comments": false,
+    "strings": false
+  },
+  "editor.suggest.selectionMode": "whenTriggerCharacter",
   "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit"
-    // "source.sortImports": "explicit"
   },
   "references.preferredLocation": "view",
   //
@@ -90,8 +93,6 @@
   //
   // Language
   //
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "Lua.diagnostics.globals": ["vim"],
   "[lua]": {
     "editor.defaultFormatter": "sumneko.lua"
   },
