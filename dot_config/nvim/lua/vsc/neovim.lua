@@ -131,8 +131,8 @@ map('n', '<leader>e', notify 'workbench.action.toggleSidebarVisibility')
 map('n', '<leader>E', notify 'workbench.files.action.showActiveFileInExplorer')
 
 -- Buffers
-map({ 'n', 'v' }, '<leader>p', notify 'workbench.action.previousEditor')
-map({ 'n', 'v' }, '<leader>n', notify 'workbench.action.nextEditor')
+map({ 'n', 'v' }, '<leader>[', notify 'workbench.action.previousEditor')
+map({ 'n', 'v' }, '<leader>]', notify 'workbench.action.nextEditor')
 
 -- Command palette
 map({ 'n', 'v' }, '<leader>/', notify 'workbench.action.showCommands')
